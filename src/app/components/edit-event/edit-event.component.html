@@ -1,0 +1,39 @@
+<br>
+<br>
+<div class="card">
+  <div class="card-header">
+      <strong>Editar Evento</strong>
+  </div>
+  <div class="card-body">
+    
+      <form ngNativeValidate [formGroup]="formEvent" (ngSubmit)="enviarDatos()">
+          <div class="mb-3">
+            <label for="" class="form-label">Titulo</label>
+            <input required formControlName="titulo" type="text"
+              class="form-control" name="" id="" aria-describedby="helpId" placeholder="Escribe el titulo">
+          </div>
+
+         <div class="mb-3">
+           <label for="" class="form-label">Descripción del Evento</label>
+           <textarea required formControlName="descripcion" class="form-control" name="" id="" rows="3"></textarea>
+         </div>
+
+          <div class="mb-3">
+            <label for="" class="form-label">Fecha y Hora del Evento</label>
+            <input required formControlName="datetime" type="datetime-local" class="form-control" name="" id="" 
+            aria-describedby="helpId" placeholder=""> 
+          </div>
+
+          <div class="mb-3">
+            <label for="" class="form-label">Agrega una Imagen</label>
+            <input type="file" class="form-control"  accept="image/*" (change)="subirarchivo($event)" name="" id="" placeholder="" aria-describedby="fileHelpId">
+          </div>
+
+          <div class="btn-group" role="group" aria-label="">
+              <button type="submit" class="btn btn-warning">Modificar</button>
+              <button type="button" class="btn btn-primary" routerLink="/list-event">Cancelar</button>
+          </div>
+      </form>
+  </div>
+  
+</div>

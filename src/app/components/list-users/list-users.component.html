@@ -1,0 +1,45 @@
+<br>
+<br>
+<div class="card">
+        
+    <div class="card-body">
+        <h1>Usuarios Registrados</h1>
+        <hr>
+            <input  placeholder="Filter">
+      
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellidos</th>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                    <th>Fecha De Registro</th>
+                    <th>Perfil</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of Usuarios; let iControl=index">
+                    <td>{{user.id_personal_information}}</td>
+                    <td>{{user.LastName}}</td>
+                    <td>{{user.FirstName}}</td>
+                    <td>
+                        <div *ngIf = "user.Gender == 'M'">
+                            Masculino
+                        </div>
+                        <div *ngIf = "user.Gender == 'F'">
+                            Femenino
+                        </div>
+                    </td>
+                    <td>{{user.RegistrationDate}}</td>
+                    <td> 
+                        <a class="btn btn-info" routerLink="/profile/{{user.id_personal_information}}">Ver</a> 
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+    </div>
+</div>

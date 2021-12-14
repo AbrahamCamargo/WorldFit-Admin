@@ -1,0 +1,55 @@
+<br>
+<br>
+<div class="card w-75 p-3 position-absolute">
+    <div class="card-header">
+        <h1>{{CompletName}}</h1>
+    </div>
+    <div class="card-body">
+            <h1>Informacion Personal</h1>
+        <form ngNativeValidate [formGroup]="formProfile">
+            <div class="input-group">&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Apellidos</span>
+                <input type="text"  class="form-control text-center" formControlName="LastName" id="LastName" value="" readonly>&nbsp;&nbsp; 
+                <span class="input-group-text bg-primary text-light">Nombre</span>
+                <input type="text"  class="form-control text-center" formControlName="FirstName" id="FirstName" readonly>&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">BirthDate</span>
+                <input type="date"  class="form-control text-center" formControlName="BirthDate" readonly >&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Genero</span>
+                <input type="text"  class="form-control text-center" formControlName="Gender"  readonly>&nbsp;&nbsp;
+                <br>   
+            </div>
+            
+                <br>
+            <div class="input-group">&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Usuario</span>
+                <input type="text"  class="form-control text-center" formControlName="User"  readonly>&nbsp;&nbsp;                    
+                <span class="input-group-text bg-primary text-light">Email</span>
+                <input type="email"  class="form-control text-center" formControlName="Email"  readonly>&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Telefono</span>
+                <input type="text"  class="form-control text-center" formControlName="Phone" readonly>&nbsp;&nbsp;
+            </div>
+            <br>
+            <br>
+            <br>
+        </form>
+        <form ngNativeValidate [formGroup]="formEstadisticas">
+            <h1>Estadisticas Corporales</h1>
+            <br>
+            <div class="input-group">&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Altura</span>
+                <input type="text"  class="form-control text-center" formControlName="Height"   readonly>&nbsp;&nbsp; 
+                <span class="input-group-text bg-primary text-light">Peso</span>
+                <input type="text"  class="form-control text-center"  formControlName="Weight"  readonly>&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">IMC</span>
+                <input type="text"  class="form-control text-center" formControlName="IMC" readonly >&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Body Fat</span>
+                <input type="text"  class="form-control text-center" formControlName="BF"  readonly>&nbsp;&nbsp;
+                <span class="input-group-text bg-primary text-light">Edad</span>
+                <input type="text"  class="form-control text-center" formControlName="Age"  readonly>&nbsp;&nbsp;
+                <br>   
+            </div>
+        </form>
+  
+    </div>
+    
+  </div>

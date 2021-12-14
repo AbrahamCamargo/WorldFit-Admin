@@ -1,0 +1,47 @@
+<br>
+<br>
+<div class="card">
+        
+    <div class="card-body">
+        <h1>Usuarios Con Membresia</h1>
+        <h3 class="text-end"><strong>Total de Membresias: </strong>{{total}}</h3>
+        <hr>
+            <input  placeholder="Filter">
+      
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellidos</th>
+                    <th>Nombre</th>
+                    <th>Genero</th>
+                    <th>Membresia</th>
+                    <th>Precio</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha Finalizacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let mem of membresias; let iControl=index">
+                    <td>{{mem.id_personal_information}}</td>
+                    <td>{{mem.LastName}}</td>
+                    <td>{{mem.FirstName}}</td>
+                    <td>
+                        <div *ngIf = "mem.Gender == 'M'">
+                            Masculino
+                        </div>
+                        <div *ngIf = "mem.Gender == 'F'">
+                            Femenino
+                        </div>
+                    </td>
+                    <td>{{mem.Name}}</td>
+                    <td>{{mem.Price}} mxn</td>
+                    <td>{{mem.Date_Membership}}</td>
+                    <td>{{mem.Date_End_Membership}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+    </div>
+</div>

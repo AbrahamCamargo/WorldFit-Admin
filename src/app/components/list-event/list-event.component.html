@@ -1,0 +1,63 @@
+<br>
+<br>
+<!-- <div class="card">
+    <div class="card-header">
+        <a class="btn btn-success" routerLink="/add-event">Agregar Nuevo Evento</a>
+    </div>
+    <div class="card-body">
+        <h1>Eventos</h1>
+        
+            <input  placeholder="Filter">
+      
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let evento of Eventos; let iControl=index">
+                    <td>{{evento.id_Event}}</td>
+                    <td>{{evento.Title}}</td>
+                    <td>{{evento.Description}}</td>
+                    <td>{{evento.DateTime}}</td>
+                    <td> 
+                        <a class="btn btn-info" routerLink="/edit-event/{{evento.id_Event}}">Editar</a> | 
+                        <a class="btn btn-danger" (click)="deleteRegister(evento.id_Event,iControl)"  role="button">Borrar</a>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+    </div>
+</div> -->
+
+<div class="card-header">
+    <a class="btn btn-success" routerLink="/add-event">Agregar Nuevo Evento</a>
+</div>
+<br>
+<br>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let evento of Eventos; let iControl=index" class="card h-100" style="width: 18rem;">
+        <img src="http://localhost/worldfit/{{evento.Picture}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><strong><h2>{{evento.Title}}</h2></strong></h5>
+          <p class="card-text">{{evento.Description}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Fecha:&nbsp;</strong> {{GetDate(evento.DateTime)}}</li>
+          <li class="list-group-item"><strong>Hora:&nbsp;</strong>{{GetTime(evento.DateTime)}}</li>
+        </ul>
+        <div class="card-body">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-info" routerLink="/edit-event/{{evento.id_Event}}">Editar</a> &nbsp;&nbsp;&nbsp;&nbsp; 
+            <a class="btn btn-danger" (click)="deleteRegister(evento.id_Event,iControl)"  role="button">Borrar</a>
+        </div>
+      </div>
+  </div>
+  <br><br><br><br>
