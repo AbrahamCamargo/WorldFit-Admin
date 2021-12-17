@@ -1,0 +1,76 @@
+<br>
+<br>
+<div class="card">
+        
+    <div class="card-body">
+        <h1>Reservaciones</h1>
+         <hr>
+            <input  placeholder="Filter">
+      
+
+            
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Apellidos</th>
+                    <th>Nombre</th>
+                    <th>Evento</th>
+                    <th>Fecha de Reservacion</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let mem of reservaciones; let iControl=index">
+                    <td>{{mem.id_Reservation}}</td>
+                    <td>{{mem.LastName}}</td>
+                    <td>{{mem.FirstName}}</td>
+                    <td>{{mem.Title}}</td>
+                    <td>{{mem.DateTime}}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+
+    </div>
+</div>
+
+
+
+
+
+<!-- <br>
+<br>
+<div class="card">
+        
+    <div class="card-body">
+        <h1>Reservaciones</h1>
+        <hr>
+            <input  placeholder="Filter">
+      
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Evento</th>
+                    <th>Apelidos</th>
+                    <th>Nombre</th>
+                    <th>Fecha De Registro</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let res of reservaciones; let iControl=index">
+                    <td>{{res.id_Reservation}}</td>
+                    <td>{{res.Title}}</td>
+                    <td>{{res.LastName}}</td>
+                    <td>{{res.FirstName}}</td>
+                    <td>{{res.DateTime}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        
+
+    </div>
+</div> 
+ -->

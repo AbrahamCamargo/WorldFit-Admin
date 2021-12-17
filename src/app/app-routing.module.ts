@@ -7,6 +7,7 @@ import { ListUsersComponent } from './components/list-users/list-users.component
 import {HomeComponent} from './components/home/home.component';
 import {ProfileComponent} from './components/profile/profile.component';
 import { MembershipsComponent } from './components/memberships/memberships.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
 
 const routes: Routes = [
   {path: '',pathMatch:'full', redirectTo:'home'},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent},
   {path: 'profile', component:ProfileComponent},
   {path: 'profile/:id', component:ProfileComponent},
-  {path: 'memberships', component:MembershipsComponent}
+  {path: 'memberships', component:MembershipsComponent},
+  {path: 'reservations', component:ReservationsComponent}
 ];
 
 @NgModule({

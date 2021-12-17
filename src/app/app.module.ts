@@ -12,13 +12,16 @@ import {FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ListUsersComponent } from './components/list-users/list-users.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ChartsModule } from 'ng2-charts'; //******************************************* */
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
 import { HomeComponent } from './components/home/home.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MembershipsComponent } from './components/memberships/memberships.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { MembershipsComponent } from './components/memberships/memberships.compo
     ProfileComponent,
     FooterComponent,
     MembershipsComponent,
+    ReservationsComponent,
+    BarChartComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
@@ -40,13 +46,15 @@ import { MembershipsComponent } from './components/memberships/memberships.compo
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
   
-    MembershipsComponent
+    MembershipsComponent,
+       ReservationsComponent
   ]
 })
 export class AppModule { }

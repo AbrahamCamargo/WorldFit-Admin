@@ -8,14 +8,33 @@ import { CRUDService } from 'src/app/service/crud.service';
 })
 export class HomeComponent implements OnInit {
   valor:any;
-  constructor(private CRUDService:CRUDService) { }
+  namedata:any;
+  constructor(private CRUDService:CRUDService) { 
+    
+  }
 
   ngOnInit(): void {
+   this.getdatatitle();
   }
 
   myFunc(){
     this.valor = "Hola mundo desde home xD..............";
     this.CRUDService.val = this.valor;
-    
   }
+ 
+
+  getdatatitle(){
+    this.CRUDService.getEventTitle().subscribe(respuesta=>{
+      this.namedata = respuesta;
+      for ( let item of this.namedata) {
+        CRUDService.namedata.push(item.Title);
+       }
+
+
+       
+       //console.log( CRUDService.namedata.length);
+    });
+  }
+
+
 }
